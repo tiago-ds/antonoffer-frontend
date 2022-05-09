@@ -1,0 +1,29 @@
+<div class="main-container">
+    <h1 class="title">antonoffer</h1>
+    <div class="controls-container">
+        <h2>Genre style</h2>
+        <div>
+            <li *ngFor="let music of styles">
+                <ul>
+                    <button [ngClass]="'style-selection-button style-' + music.name" [disabled]="music.selected" (click)="selectStyle(music.name)">
+                        {{music.name}}
+                    </button>
+                </ul>
+            </li>
+        </div>
+
+        <h2>Song input</h2>
+
+        <div>
+            <input type="file" id="file" (change)="processFile($event.target)"/>
+            <label for="file" class="upload-file-button">Upload file</label>
+        </div>
+        <div>
+            <button class="stylize-button" (click)="this.sendFile()">Stylize</button>
+        </div>
+
+        <h2>Song output</h2>
+
+        <audio src="">a</audio>
+    </div>
+</div>

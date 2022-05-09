@@ -1,0 +1,132 @@
+.main-container {
+    margin: auto;
+    width: 728px;
+    padding-top: 32px;
+    text-align: center;
+}
+
+.main-container .title {
+    padding-bottom: 16px;
+    letter-spacing: -0.05em;
+    font-size: 48px;
+}
+
+.controls-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, .60);
+    backdrop-filter: blur(5px);
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+li {
+    display: inline-flex;
+}
+
+.style-selection-button {
+    height: 256px;
+    width: 156px;
+    font-family: inherit;
+    font-size: 2em;
+    line-height: 1.15;
+    margin: 0;
+    padding: 16px;
+    border: none;
+
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: flex-end;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.style-selection-button:hover {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.style-selection-button:disabled {
+    border: 2px solid rgba(100, 100, 100, 1);
+    box-shadow: none;
+}
+
+.style-soul {
+    background-image:
+        linear-gradient(to bottom, rgba(255, 130, 77, 0), rgba(255, 130, 77, 240)),
+        url('../assets/soul.jpg');
+    background-position: left center;
+}
+
+.style-kpop {
+    background-image:
+        linear-gradient(to bottom, rgba(255, 204, 0, 0), rgba(255, 204, 0, 240)),
+        url('../assets/kpop.jpg');
+}
+
+.style-edm {
+    background-image:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 240)),
+        url('../assets/edm.jpg');
+}
+
+[type=file] {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+[type=file]+label, .stylize-button {
+    background-image: linear-gradient(
+    0deg,
+    hsl(315deg 89% 58%) 0%,
+    hsl(323deg 100% 59%) 25%,
+    hsl(332deg 100% 60%) 50%,
+    hsl(344deg 100% 65%) 75%,
+    );
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+}
+
+[type=file]+label:hover {
+  background-color: rgb(151, 4, 114);
+}
+
+[type=file]+label.upload-file-button, .stylize-button {
+  background-color: hsl(323deg 100% 59%);
+  box-shadow: 0 6px rgb(151, 4, 114);
+  transition: none;
+}
+
+[type=file]+label.upload-file-button:hover, .stylize-button:hover {
+  box-shadow: 0 4px rgb(151, 4, 114) ;
+  top: 2px;
+}
+
